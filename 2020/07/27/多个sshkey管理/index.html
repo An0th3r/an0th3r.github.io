@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="在使用服务器中通常通过公钥进行ssh登陆，登陆不同的服务器使用不同的公钥，下面是我遇到多个公钥管理时对配置方法的记录。 生成sshkey1ssh-keygen -t rsa -C &quot;your@email.com&quot;  执行以上命令后有三个步骤：  设置生成的密钥对文件名，默认为id_rsa，id_rsa.pub。其中以pub结尾的为公钥。 设置密钥对密码 重复密码  配置多个公钥 将私钥添加进ssh">
+    <meta name="description" content="在使用服务器中通常通过公钥进行ssh登陆，登陆不同的服务器使用不同的公钥，下面是我遇到多个公钥管理时对配置方法的记录。 生成sshkey1ssh-keygen -t rsa -C &quot;your@email.com&quot;  执行以上命令后有三个步骤：  设置生成的密钥对文件名，默认为id_rsa，id_rsa.pub。其中以pub结尾的为公钥。 设置密钥对密码 重复密码  使用公钥登陆 将id_rsa.p">
 <meta property="og:type" content="article">
 <meta property="og:title" content="多个sshkey管理">
 <meta property="og:url" content="https://an0th3r.github.io/2020/07/27/%E5%A4%9A%E4%B8%AAsshkey%E7%AE%A1%E7%90%86/index.html">
 <meta property="og:site_name" content="An0th3r&#39;s Note">
-<meta property="og:description" content="在使用服务器中通常通过公钥进行ssh登陆，登陆不同的服务器使用不同的公钥，下面是我遇到多个公钥管理时对配置方法的记录。 生成sshkey1ssh-keygen -t rsa -C &quot;your@email.com&quot;  执行以上命令后有三个步骤：  设置生成的密钥对文件名，默认为id_rsa，id_rsa.pub。其中以pub结尾的为公钥。 设置密钥对密码 重复密码  配置多个公钥 将私钥添加进ssh">
+<meta property="og:description" content="在使用服务器中通常通过公钥进行ssh登陆，登陆不同的服务器使用不同的公钥，下面是我遇到多个公钥管理时对配置方法的记录。 生成sshkey1ssh-keygen -t rsa -C &quot;your@email.com&quot;  执行以上命令后有三个步骤：  设置生成的密钥对文件名，默认为id_rsa，id_rsa.pub。其中以pub结尾的为公钥。 设置密钥对密码 重复密码  使用公钥登陆 将id_rsa.p">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-27T14:28:24.000Z">
-<meta property="article:modified_time" content="2020-07-27T15:04:12.709Z">
+<meta property="article:modified_time" content="2020-07-27T15:11:50.583Z">
 <meta property="article:author" content="An0th3r">
 <meta property="article:tag" content="other">
 <meta name="twitter:card" content="summary">
@@ -104,7 +104,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#生成sshkey"><span class="toc-number">1.</span> <span class="toc-text">生成sshkey</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置多个公钥"><span class="toc-number">2.</span> <span class="toc-text">配置多个公钥</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#生成sshkey"><span class="toc-number">1.</span> <span class="toc-text">生成sshkey</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用公钥登陆"><span class="toc-number">2.</span> <span class="toc-text">使用公钥登陆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置多个公钥"><span class="toc-number">3.</span> <span class="toc-text">配置多个公钥</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -157,12 +157,20 @@
 <li>设置密钥对密码</li>
 <li>重复密码</li>
 </ol>
+<h2 id="使用公钥登陆"><a href="#使用公钥登陆" class="headerlink" title="使用公钥登陆"></a>使用公钥登陆</h2><ol>
+<li><p>将<code>id_rsa.pub</code>的内容拷贝至要登陆的服务器的<code>～/.ssh/authorized_keys</code>中，一行一个公钥</p>
+</li>
+<li><p>ssh命令指定公钥登陆</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -i id_rsa user@host</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
 <h2 id="配置多个公钥"><a href="#配置多个公钥" class="headerlink" title="配置多个公钥"></a>配置多个公钥</h2><ol>
 <li><p>将私钥添加进<code>ssh-agent</code>中</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>配置ssh的config文件。先在<code>~/.ssh</code>目录下创建<code>config</code>文件并进行编辑</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 注释</span><br><span class="line">Host 192.168.100.1</span><br><span class="line">    HostName 192.168.100.1</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile ~&#x2F;.ssh&#x2F;id_ras_vultr</span><br><span class="line">    User root</span><br><span class="line">    Port 22</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 注释</span><br><span class="line">Host 192.168.100.1</span><br><span class="line">    HostName 192.168.100.1</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile ~&#x2F;.ssh&#x2F;id_ras</span><br><span class="line">    User root</span><br><span class="line">    Port 22</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>保存退出</p>
 </li>
@@ -192,7 +200,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#生成sshkey"><span class="toc-number">1.</span> <span class="toc-text">生成sshkey</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置多个公钥"><span class="toc-number">2.</span> <span class="toc-text">配置多个公钥</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#生成sshkey"><span class="toc-number">1.</span> <span class="toc-text">生成sshkey</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用公钥登陆"><span class="toc-number">2.</span> <span class="toc-text">使用公钥登陆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置多个公钥"><span class="toc-number">3.</span> <span class="toc-text">配置多个公钥</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
